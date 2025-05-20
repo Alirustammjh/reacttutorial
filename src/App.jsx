@@ -11,14 +11,20 @@ import './App.css'
 // import  Handlereusecoponent from "./reusecomponet.jsx";
 // import Handleuseeffect from "./useeffect.jsx";
 // import  Clock from "./clock.jsx";
-import Handleuseeffectprops from './useeffectprops.jsx';
-import {useState} from "react";
+// import Handleuseeffectprops from './useeffectprops.jsx';
+import StudentCard from './inlinecss.jsx';
+// import {useState} from "react";
 function App() {
 
   return (
     <>
       <div>
-        <Handleuseeffectprops/>
+          <StudentCard
+              name="John Doe"
+              age={16}
+              grade="10th"
+              avatar="https://placehold.co/600x400/EEE/31343C"
+          />
       </div>
     </>
   )
