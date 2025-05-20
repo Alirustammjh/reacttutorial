@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentCard = ({ name, age, grade, avatar }) => {
+const StudentCard = ({ data }) => {
     const cardStyle = {
         border: '1px solid #ccc',
         borderRadius: '10px',
@@ -41,54 +41,14 @@ const StudentCard = ({ name, age, grade, avatar }) => {
 
     return (
         <div style={mainDivStyle}>
-        <div style={cardStyle}>
-            {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-            <div style={nameStyle}>{name}</div>
-            <div style={detailStyle}>Age: {age}</div>
-            <div style={detailStyle}>Grade: {grade}</div>
+            {data.map((item, index) => (
+        <div style={cardStyle} key={index}>
+            {item.avatar && <img src={item.avatar} alt={name} style={avatarStyle} />}
+            <div style={nameStyle}>{item.name}</div>
+            <div style={detailStyle}>Age: {item.age}</div>
+            <div style={detailStyle}>Grade: {item.grade}</div>
         </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
-            <div style={cardStyle}>
-                {avatar && <img src={avatar} alt={name} style={avatarStyle} />}
-                <div style={nameStyle}>{name}</div>
-                <div style={detailStyle}>Age: {age}</div>
-                <div style={detailStyle}>Grade: {grade}</div>
-            </div>
+            ))}
         </div>
     );
 };

@@ -13,18 +13,64 @@ import './App.css'
 // import  Clock from "./clock.jsx";
 // import Handleuseeffectprops from './useeffectprops.jsx';
 import StudentCard from './inlinecss.jsx';
-// import {useState} from "react";
+import ToggleButton from './conditionalinline.jsx';
+import {useState} from "react";
 function App() {
 
+ const studentdetail = [
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },{
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     },
+     {
+         name:"John Doe",
+         age:16,
+         grade:"10th",
+         avatar:"https://placehold.co/600x400/EEE/31343C"
+     }
+ ]
   return (
     <>
       <div>
-          <StudentCard
-              name="John Doe"
-              age={16}
-              grade="10th"
-              avatar="https://placehold.co/600x400/EEE/31343C"
-          />
+          <StudentCard data={studentdetail} />
+          <ToggleButton />
       </div>
     </>
   )
