@@ -18,6 +18,7 @@ import {useState} from "react";
 import Handleexternalcss from "./externalstyle.jsx";
 import Handlemodulecss from "./modulecss.jsx";
 import Handlestyledcomponent from "./styledcomponent.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -80,7 +81,7 @@ function App() {
           <Handleexternalcss/>
           <h1>Module Css Apply Here</h1>
           <Handlemodulecss/>
-          <h1>Styled Component</h1>
+          <h1>Styled Component Apply Here</h1>
           <Handlestyledcomponent/>
       </div>
     </>
