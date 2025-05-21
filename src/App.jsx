@@ -16,6 +16,8 @@ import StudentCard from './inlinecss.jsx';
 import ToggleButton from './conditionalinline.jsx';
 import {useState} from "react";
 import Handleexternalcss from "./externalstyle.jsx";
+import Handlemodulecss from "./modulecss.jsx";
+
 
 function App() {
 
@@ -75,6 +77,8 @@ function App() {
           <ToggleButton />
           <h1>External Styling Apply Here</h1>
           <Handleexternalcss/>
+          <h1>Module Css Apply Here</h1>
+          <Handlemodulecss/>
       </div>
     </>
   )
