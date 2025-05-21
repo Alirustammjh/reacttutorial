@@ -4,7 +4,7 @@ import './App.css'
 // import Singlrexport,{Firstmultiexport,Secondmultiexport} from "./multicomponent.jsx";
 // import Counter,{Changefruite} from "./usestate.jsx";
 // import ControlledInput from "./ctrlcomponent.jsx";
-// import UncontrolledInput from "./unctrlcomponent.jsx";
+ import UncontrolledInput from "./unctrlcomponent.jsx";
 // import  Checkvaluop from "./checkbox.jsx";
 // import  Handleradiodrop from "./radiodropdown.jsx";
 // import  Handleloop from "./looping.jsx";
@@ -90,6 +90,8 @@ function App() {
           <Handlemodulecss/>
           <h1>useRef Example</h1>
           <Handleuseref/>
+          <h1>Uncontrollable Component</h1>
+          <UncontrolledInput/>
       </div>
     </>
   )
