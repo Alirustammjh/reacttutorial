@@ -17,8 +17,12 @@ import ToggleButton from './conditionalinline.jsx';
 import {useState} from "react";
 import Handleexternalcss from "./externalstyle.jsx";
 import Handlemodulecss from "./modulecss.jsx";
-import Handlestyledcomponent from "./styledcomponent.jsx";
+ // import Handlestyledcomponent from "./styledcomponent.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BasicExample from "./styledcomponent.jsx";
+import DarkVariantExample from "./hero.jsx";
+
+
 
 
 function App() {
@@ -75,6 +79,8 @@ function App() {
   return (
     <>
       <div>
+          <BasicExample/>
+          <DarkVariantExample/>
           <StudentCard data={studentdetail} />
           <ToggleButton />
           <h1>External Styling Apply Here</h1>
@@ -82,7 +88,7 @@ function App() {
           <h1>Module Css Apply Here</h1>
           <Handlemodulecss/>
           <h1>Styled Component Apply Here</h1>
-          <Handlestyledcomponent/>
+
       </div>
     </>
   )

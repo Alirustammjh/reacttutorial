@@ -1,52 +1,34 @@
-import { useState } from 'react';
-import styled from 'styled-components';
-import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert';
-import Badge from 'react-bootstrap/Badge';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-const FirstStyledComponent = styled.h1`
-  color: red;
-    border: 1px solid green;
-    background-color: gray;
-`;
-
-const Handlestyledcomponent = () => {
+function BasicExample() {
     return (
-        <div>
-
-
-            <Breadcrumb>
-                <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-                    Library
-                </Breadcrumb.Item>
-                <Breadcrumb.Item active>Data</Breadcrumb.Item>
-            </Breadcrumb>
-
-            <h1>
-                Example heading <Badge bg="secondary">New</Badge>
-            </h1>
-            <h2>
-                Example heading <Badge bg="secondary">New</Badge>
-            </h2>
-            <h3>
-                Example heading <Badge bg="secondary">New</Badge>
-            </h3>
-            <h4>
-                Example heading <Badge bg="secondary">New</Badge>
-            </h4>
-            <h5>
-                Example heading <Badge bg="secondary">New</Badge>
-            </h5>
-            <h6>
-                Example heading <Badge bg="secondary">New</Badge>
-            </h6>
-
-
-
-        </div>
+        <Navbar expand="lg" className="bg-body-tertiary">
+            <Container>
+                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="#link">Link</Nav.Link>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Another action
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">
+                                Separated link
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
-};
+}
 
-export default Handlestyledcomponent;
+export default BasicExample;
