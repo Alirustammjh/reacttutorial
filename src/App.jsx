@@ -15,6 +15,8 @@ import './App.css'
 import StudentCard from './inlinecss.jsx';
 import ToggleButton from './conditionalinline.jsx';
 import {useState} from "react";
+import Handleexternalcss from "./externalstyle.jsx";
+
 function App() {
 
  const studentdetail = [
@@ -71,6 +73,8 @@ function App() {
       <div>
           <StudentCard data={studentdetail} />
           <ToggleButton />
+          <h1>External Styling Apply Here</h1>
+          <Handleexternalcss/>
       </div>
     </>
   )
