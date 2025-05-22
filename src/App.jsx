@@ -28,7 +28,11 @@ import Handleuseref from "./useref.jsx";
 
 function App() {
 
- const studentdetail = [
+ const userInfofunction = (name) => {
+     alert(name);
+ }
+
+    const studentdetail = [
      {
          name:"John Doe",
          age:16,
@@ -91,7 +95,7 @@ function App() {
           <h1>useRef Example</h1>
           <Handleuseref/>
           <h1>Uncontrollable Component</h1>
-          <UncontrolledInput/>
+          <UncontrolledInput  userInfofunction={userInfofunction} />
       </div>
     </>
   )

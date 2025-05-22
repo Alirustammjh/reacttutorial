@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function UncontrolledInput() {
+function UncontrolledInput({userInfofunction}) {
     const inputRef = useRef(null);
 
     const handleSubmit = (event) => {
@@ -30,6 +30,9 @@ function UncontrolledInput() {
                 <input type="text" id={"inputRefemail"}/>
                 <button type="submit">Submit</button>
             </form>
+            <h1>Pass function from Parent to child component</h1>
+            <button onClick={()=>userInfofunction('Vishal')}>Click Me</button>
+
         </div>
     );
 }
