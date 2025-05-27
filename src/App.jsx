@@ -14,7 +14,7 @@ import './App.css'
 // import Handleuseeffectprops from './useeffectprops.jsx';
 import StudentCard from './inlinecss.jsx';
 import ToggleButton from './conditionalinline.jsx';
-import {useState} from "react";
+import {useRef, useState} from "react";
 import Handleexternalcss from "./externalstyle.jsx";
 import Handlemodulecss from "./modulecss.jsx";
  // import Handlestyledcomponent from "./styledcomponent.jsx";
@@ -22,6 +22,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import BasicExample from "./styledcomponent.jsx";
 import DarkVariantExample from "./hero.jsx";
 import Handleuseref from "./useref.jsx";
+import Handleforwardref from "./forwardref.jsx";
 
 
 
@@ -30,6 +31,13 @@ function App() {
 
  const userInfofunction = (name) => {
      alert(name);
+ }
+
+ const forwardRef = useRef(null);
+ const updateforwardRef = () => {
+     forwardRef.current.value = 1000;
+     forwardRef.current.focus();
+     forwardRef.current.style.color = "red";
  }
 
     const studentdetail = [
@@ -96,6 +104,9 @@ function App() {
           <Handleuseref/>
           <h1>Uncontrollable Component</h1>
           <UncontrolledInput  userInfofunction={userInfofunction} />
+          <p>Forward Ref Example</p>
+          <Handleforwardref ref={forwardRef}/>
+          <button onClick={updateforwardRef}>Forward Update Input field</button>
       </div>
     </>
   )

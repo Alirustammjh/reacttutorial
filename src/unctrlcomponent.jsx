@@ -31,7 +31,7 @@ function UncontrolledInput({userInfofunction}) {
                 <button type="submit">Submit</button>
             </form>
             <h1>Pass function from Parent to child component</h1>
-            <button onClick={()=>userInfofunction('Vishal')}>Click Me</button>
+            <button onClick={()=>userInfofunction('Webgarh')}>Click Me</button>
 
         </div>
     );
