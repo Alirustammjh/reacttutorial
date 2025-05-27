@@ -1,5 +1,6 @@
 // import { useState } from 'react'
 import './App.css'
+import {useFormStatus} from "react-dom";
 // import Header from './header.jsx'
 // import Singlrexport,{Firstmultiexport,Secondmultiexport} from "./multicomponent.jsx";
 // import Counter,{Changefruite} from "./usestate.jsx";
@@ -23,6 +24,9 @@ import BasicExample from "./styledcomponent.jsx";
 import DarkVariantExample from "./hero.jsx";
 import Handleuseref from "./useref.jsx";
 import Handleforwardref from "./forwardref.jsx";
+import {Form} from "react-bootstrap";
+// import MyForm from "./useformstaus.jsx";
+
 
 
 
@@ -38,6 +42,33 @@ function App() {
      forwardRef.current.value = 1000;
      forwardRef.current.focus();
      forwardRef.current.style.color = "red";
+ }
+
+ const handleFormstatussubmit = async () => {
+     await new Promise(res => setTimeout(res, 1000));
+     console.log("submitted");
+ }
+
+ // function CustomerForm(){
+ //     const {pending} = useFormStatus();
+ //     console.log(pending);
+ //
+ // }
+
+ function CustomerForm(){
+     const {pending} = useFormStatus();
+     console.log(pending);
+     return (
+         <div>
+             <input type="text" placeholder='Enter Name' />
+             <br/>
+             <br/>
+             <input type="text" placeholder='Enter Password' />
+             <br/>
+             <br/>
+             <button disabled={pending}>Submit</button>
+         </div>
+     )
  }
 
     const studentdetail = [
@@ -89,9 +120,23 @@ function App() {
          avatar:"https://placehold.co/600x400/EEE/31343C"
      }
  ]
+
+
+
+
   return (
     <>
       <div>
+
+          <div>
+              <h1>useFormStaus In React 19</h1>
+              <form action={handleFormstatussubmit}>
+
+               <CustomerForm/>
+
+              </form>
+          </div>
+
           <BasicExample/>
           <DarkVariantExample/>
           <StudentCard data={studentdetail} />
@@ -107,6 +152,8 @@ function App() {
           <p>Forward Ref Example</p>
           <Handleforwardref ref={forwardRef}/>
           <button onClick={updateforwardRef}>Forward Update Input field</button>
+          <p1>useFormStatus Example</p1>
+          {/*<MyForm/>*/}
       </div>
     </>
   )
