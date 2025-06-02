@@ -26,6 +26,7 @@ import Handleuseref from "./useref.jsx";
 import Handleforwardref from "./forwardref.jsx";
 import {Form} from "react-bootstrap";
 // import MyForm from "./useformstaus.jsx";
+import SearchComponent from './unstrans.jsx';
 
 
 
@@ -54,6 +55,17 @@ function App() {
  //     console.log(pending);
  //
  // }
+
+    const itemList = [
+        'Apple',
+        'Banana',
+        'Cherry',
+        'Date',
+        'Elderberry',
+        'Fig',
+        'Grape',
+        'Honeydew'
+    ];
 
  function CustomerForm(){
      const {pending} = useFormStatus();
@@ -127,6 +139,10 @@ function App() {
   return (
     <>
       <div>
+
+          <div className="use-transition">
+              <SearchComponent items={itemList}/>
+          </div>
 
           <div>
               <h1>useFormStaus In React 19</h1>
