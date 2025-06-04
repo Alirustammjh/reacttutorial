@@ -27,6 +27,7 @@ import Handleforwardref from "./forwardref.jsx";
 import {Form} from "react-bootstrap";
 // import MyForm from "./useformstaus.jsx";
 import SearchComponent from './unstrans.jsx';
+import Handleobjectupdate from "./updateobjectsinstate.jsx";
 
 
 
@@ -139,6 +140,7 @@ function App() {
   return (
     <>
       <div>
+          <Handleobjectupdate/>
 
           <div className="use-transition">
               <SearchComponent items={itemList}/>
