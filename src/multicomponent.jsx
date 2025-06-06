@@ -6,7 +6,7 @@ function Singlrexport(props){
         age: 30,
         address: {
             street: '123 Main St',
-            city: 'Anytown',
+            city: 'Anytojwn',
             state: 'Anystate'
         }
 
