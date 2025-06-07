@@ -28,6 +28,7 @@ import {Form} from "react-bootstrap";
 // import MyForm from "./useformstaus.jsx";
 import SearchComponent from './unstrans.jsx';
 import Handleobjectupdate from "./updateobjectsinstate.jsx";
+import Handlearrayupdatestate from "./updatearrayinstate.jsx";
 
 
 
@@ -140,6 +141,7 @@ function App() {
   return (
     <>
       <div>
+          <Handlearrayupdatestate/>
           <Handleobjectupdate/>
 
           <div className="use-transition">
