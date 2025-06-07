@@ -20,6 +20,7 @@ const Handlearrayupdatestate = () => {
         <div>
             <h1>Update Array In States values</h1>
             <input type="text" onChange={(e)=>updateUserdetails(e.target.value)}/>
+            
             <hr/>
             {userdetails.map((userdetails,index) => (
             <p key={index}>{userdetails.age}</p>
