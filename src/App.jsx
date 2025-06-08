@@ -29,7 +29,7 @@ import {Form} from "react-bootstrap";
 import SearchComponent from './unstrans.jsx';
 import Handleobjectupdate from "./updateobjectsinstate.jsx";
 import Handlearrayupdatestate from "./updatearrayinstate.jsx";
-
+import Handleuseactionstate from "./useactionstate.jsx";
 
 
 
@@ -141,6 +141,7 @@ function App() {
   return (
     <>
       <div>
+          <Handleuseactionstate/>
           <Handlearrayupdatestate/>
           <Handleobjectupdate/>
 
@@ -172,7 +173,7 @@ function App() {
           <p>Forward Ref Example</p>
           <Handleforwardref ref={forwardRef}/>
           <button onClick={updateforwardRef}>Forward Update Input field</button>
-          <p1>useFormStatus Example</p1>
+          <p>useFormStatus Example</p>
           {/*<MyForm/>*/}
       </div>
     </>
