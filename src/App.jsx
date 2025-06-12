@@ -30,7 +30,9 @@ import SearchComponent from './unstrans.jsx';
 import Handleobjectupdate from "./updateobjectsinstate.jsx";
 import Handlearrayupdatestate from "./updatearrayinstate.jsx";
 import Handleuseactionstate from "./useactionstate.jsx";
-
+import Handleuseid from "./useidhook.jsx";
+import Handlecollegedata from './college.jsx';
+import {SubjectContext} from './contextapidata.jsx';
 
 
 
@@ -135,12 +137,28 @@ function App() {
      }
  ]
 
-
+const [subject, setSubject ] = useState('');
 
 
   return (
     <>
       <div>
+          <SubjectContext.Provider value={subject}>
+            <select defaultValue={subject} onChange={(event)=> setSubject(event.target.value)}>
+                <option value="">Select Subject</option>
+                <option value="Math">Math</option>
+                <option value="English">English</option>
+                <option value="Programming">Programming</option>
+                <option value="Mysql">Mysql</option>
+            </select>
+          <div style={{background:'orange', padding:10}}>
+            <h3>ContextApi</h3>
+            <Handlecollegedata/>
+             <button onClick={(e)=>setSubject('')}>Clear Subject</button>
+          </div>
+          </SubjectContext.Provider>
+          
+          <Handleuseid/>
           <Handleuseactionstate/>
           <Handlearrayupdatestate/>
           <Handleobjectupdate/>
