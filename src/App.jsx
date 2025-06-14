@@ -140,8 +140,8 @@ function App() {
 
 const [subject, setSubject ] = useState('');
 
-const [value, toggleValue] = Handletogglecustomhook(true);
-const [secvalue, togglesecValue] = Handletogglecustomhook(true);
+const [value, toggleValue] = Handletogglecustomhook(false);
+const [secvalue, togglesecValue] = Handletogglecustomhook(false);
 console.log("Value-----",value);
   return (
     <>
