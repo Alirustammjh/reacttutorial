@@ -33,6 +33,7 @@ import Handleuseactionstate from "./useactionstate.jsx";
 import Handleuseid from "./useidhook.jsx";
 import Handlecollegedata from './college.jsx';
 import {SubjectContext} from './contextapidata.jsx';
+import Handletogglecustomhook from './usetoggle.jsx';
 
 
 
@@ -139,10 +140,32 @@ function App() {
 
 const [subject, setSubject ] = useState('');
 
-
+const [value, toggleValue] = Handletogglecustomhook(true);
+const [secvalue, togglesecValue] = Handletogglecustomhook(true);
+console.log("Value-----",value);
   return (
     <>
       <div>
+          <div>
+            <button onClick={toggleValue}>Toggle Heading</button>
+            <button onClick={() => toggleValue(true)}>Show Heading</button>
+            <button onClick={() => toggleValue(false)}>Hide Heading</button> 
+            {
+              value? <h3>Use Custom Hook In React Js</h3>: null
+            }
+          </div>
+          <hr/>
+
+         <div>
+            <button onClick={togglesecValue}>Toggle Heading Second</button>
+            <button onClick={() => togglesecValue(true)}>Show Second Heading</button>
+            <button onClick={() => togglesecValue(false)}>Hide Second Heading</button> 
+            {
+              secvalue? <h3>Use Custom Hook In React Js</h3>: null
+            }
+          </div>
+          <hr/>
+
           <SubjectContext.Provider value={subject}>
             <select defaultValue={subject} onChange={(event)=> setSubject(event.target.value)}>
                 <option value="">Select Subject</option>
